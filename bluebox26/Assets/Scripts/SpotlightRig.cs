@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class SpotlightRig : MonoBehaviour
 {
-    public Light spotLight;
+    [Header("Lights Controlled By This Board")]
+    public Light[] controlledLights;
 
     [Header("Color Control")]
     [Range(0f, 1f)] public float hue = 0f;
@@ -21,16 +22,11 @@ public class SpotlightRig : MonoBehaviour
 
     void Start()
     {
-        if (spotLight == null)
-            spotLight = GetComponentInChildren<Light>();
-
         startRotation = transform.localRotation;
     }
 
     void Update()
     {
-        if (spotLight == null) return;
-
         ApplyColor();
         ApplyBlink();
         ApplyMovement();
@@ -39,19 +35,29 @@ public class SpotlightRig : MonoBehaviour
     void ApplyColor()
     {
         Color newColor = Color.HSVToRGB(hue, saturation, value);
-        spotLight.color = newColor;
+
+        foreach (Light lightRef in controlledLights)
+        {
+            if (lightRef == null) continue;
+            lightRef.color = newColor;
+        }
     }
 
     void ApplyBlink()
     {
-        if (blinkSpeed <= 0.01f)
+        float intensity = baseIntensity;
+
+        if (blinkSpeed > 0.01f)
         {
-            spotLight.intensity = baseIntensity;
-            return;
+            float t = Mathf.PingPong(Time.time * blinkSpeed, 1f);
+            intensity = Mathf.Lerp(0f, baseIntensity, t);
         }
 
-        float t = Mathf.PingPong(Time.time * blinkSpeed, 1f);
-        spotLight.intensity = Mathf.Lerp(0f, baseIntensity, t);
+        foreach (Light lightRef in controlledLights)
+        {
+            if (lightRef == null) continue;
+            lightRef.intensity = intensity;
+        }
     }
 
     void ApplyMovement()
@@ -61,22 +67,22 @@ public class SpotlightRig : MonoBehaviour
     }
 
     public void SetHue(float normalizedValue)
-{
-    hue = Mathf.Clamp01(normalizedValue);
-}
+    {
+        hue = Mathf.Clamp01(normalizedValue);
+    }
 
-public void SetBlinkSpeed(float newBlinkSpeed)
-{
-    blinkSpeed = newBlinkSpeed;
-}
+    public void SetBlinkSpeed(float newBlinkSpeed)
+    {
+        blinkSpeed = newBlinkSpeed;
+    }
 
-public void SetMoveSpeed(float newMoveSpeed)
-{
-    moveSpeed = newMoveSpeed;
-}
+    public void SetMoveSpeed(float newMoveSpeed)
+    {
+        moveSpeed = newMoveSpeed;
+    }
 
     public void SetMoveRange(float normalizedValue)
     {
-        moveRange = Mathf.Lerp(0f, 150f, normalizedValue);
+        moveRange = Mathf.Lerp(0f, 90f, normalizedValue);
     }
 }
