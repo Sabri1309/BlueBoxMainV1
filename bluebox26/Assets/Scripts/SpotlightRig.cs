@@ -65,15 +65,15 @@ public class SpotlightRig : MonoBehaviour
     hue = Mathf.Clamp01(normalizedValue);
 }
 
-    public void SetBlinkSpeed(float newBlinkSpeed)
-    {
-        blinkSpeed = newBlinkSpeed;
-    }
+public void SetBlinkSpeed(float newBlinkSpeed)
+{
+    blinkSpeed = newBlinkSpeed;
+}
 
-    public void SetMoveSpeed(float newMoveSpeed)
-    {
-        moveSpeed = newMoveSpeed;
-    }
+public void SetMoveSpeed(float newMoveSpeed)
+{
+    moveSpeed = newMoveSpeed;
+}
 
     public void SetMoveRange(float normalizedValue)
     {
