@@ -18,18 +18,18 @@ public class SpotlightRig : MonoBehaviour
     [Range(0f, 10f)] public float moveSpeed = 1f;
     [Range(0f, 90f)] public float moveRange = 30f;
 
-    private Quaternion startRotation;
+    //private Quaternion startRotation;
 
-    void Start()
-    {
-        startRotation = transform.localRotation;
-    }
+    //void Start()
+    //{
+     //   startRotation = transform.localRotation;
+   // }
 
     void Update()
     {
         ApplyColor();
         ApplyBlink();
-        ApplyMovement();
+       // ApplyMovement();
     }
 
     void ApplyColor()
@@ -60,11 +60,11 @@ public class SpotlightRig : MonoBehaviour
         }
     }
 
-    void ApplyMovement()
-    {
-        float angle = Mathf.Sin(Time.time * moveSpeed) * moveRange;
-        transform.localRotation = startRotation * Quaternion.Euler(0f, angle, 0f);
-    }
+   // void ApplyMovement()
+   // {
+     //   float angle = Mathf.Sin(Time.time * moveSpeed) * moveRange;
+//        transform.localRotation = startRotation * Quaternion.Euler(0f, angle, 0f);
+  //  }
 
     public void SetHue(float normalizedValue)
     {
