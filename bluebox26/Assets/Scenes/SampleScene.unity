@@ -4975,7 +4975,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 0
+  moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
   randomSeed: 0
@@ -4985,7 +4985,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 3.17
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -5038,7 +5038,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2
+      scalar: 0.9
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -5092,7 +5092,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+      maxColor: {r: 0.9, g: 0.9, b: 0.9, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -5156,7 +5156,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2
+      scalar: 3.87
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -5315,7 +5315,7 @@ ParticleSystem:
     startRotationX:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: -1.0348058
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -5475,7 +5475,7 @@ ParticleSystem:
     gravitySource: 0
     maxNumParticles: 1000
     customEmitterVelocity: {x: 0, y: 0, z: 0}
-    size3D: 1
+    size3D: 0
     rotation3D: 0
     gravityModifier:
       serializedVersion: 2
@@ -5534,7 +5534,7 @@ ParticleSystem:
     serializedVersion: 6
     enabled: 1
     type: 4
-    angle: 25
+    angle: 52.01
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
@@ -5620,7 +5620,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 1
+      value: 1.5
       mode: 0
       spread: 0
       speed:
@@ -5739,7 +5739,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 10
+      scalar: 59.04
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -5792,7 +5792,7 @@ ParticleSystem:
     rateOverDistance:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 104.07
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -5845,29 +5845,29 @@ ParticleSystem:
     m_BurstCount: 0
     m_Bursts: []
   SizeModule:
-    enabled: 0
+    enabled: 1
     curve:
       serializedVersion: 2
       minMaxState: 1
-      scalar: 1
+      scalar: 1.513417
       minScalar: 1
       maxCurve:
         serializedVersion: 2
         m_Curve:
         - serializedVersion: 3
-          time: 0
-          value: 0
+          time: 0.34494928
+          value: 0.26289368
           inSlope: 0
-          outSlope: 1
+          outSlope: 0
           tangentMode: 0
           weightedMode: 0
           inWeight: 0.33333334
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 1
-          value: 1
+          time: 0.9477234
+          value: 0.96089363
           inSlope: 1
-          outSlope: 0
+          outSlope: 1
           tangentMode: 0
           weightedMode: 0
           inWeight: 0.33333334
@@ -6360,11 +6360,11 @@ ParticleSystem:
     flipU: 0
     flipV: 0
   VelocityModule:
-    enabled: 0
+    enabled: 1
     x:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 0.16
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -6417,7 +6417,7 @@ ParticleSystem:
     y:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 1.36
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -6470,7 +6470,7 @@ ParticleSystem:
     z:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 0.3
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -7282,7 +7282,7 @@ ParticleSystem:
       m_Bits: 4294967295
     influenceList: []
   ClampVelocityModule:
-    enabled: 0
+    enabled: 1
     x:
       serializedVersion: 2
       minMaxState: 0
@@ -7499,7 +7499,7 @@ ParticleSystem:
     inWorldSpace: 0
     multiplyDragByParticleSize: 1
     multiplyDragByParticleVelocity: 1
-    dampen: 0
+    dampen: 0.43
     drag:
       serializedVersion: 2
       minMaxState: 0
@@ -7554,11 +7554,11 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
   NoiseModule:
-    enabled: 0
+    enabled: 1
     strength:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.05
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -7715,8 +7715,8 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     separateAxes: 0
-    frequency: 0.5
-    damping: 1
+    frequency: 0.27
+    damping: 0
     octaves: 1
     octaveMultiplier: 0.5
     octaveScale: 2
@@ -8094,7 +8094,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
   SizeBySpeedModule:
-    enabled: 0
+    enabled: 1
     curve:
       serializedVersion: 2
       minMaxState: 1
@@ -8107,16 +8107,16 @@ ParticleSystem:
           time: 0
           value: 0
           inSlope: 0
-          outSlope: 1
+          outSlope: 0
           tangentMode: 0
           weightedMode: 0
           inWeight: 0.33333334
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 1
-          value: 1
+          time: 0.3867798
+          value: 0.78461456
           inSlope: 1
-          outSlope: 0
+          outSlope: 1
           tangentMode: 0
           weightedMode: 0
           inWeight: 0.33333334
@@ -10891,16 +10891,28 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: fa03716e7815c774b9109fdb2a50b27b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5669
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fa03716e7815c774b9109fdb2a50b27b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5669
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fa03716e7815c774b9109fdb2a50b27b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5669
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fa03716e7815c774b9109fdb2a50b27b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.067
+      value: -8.271
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fa03716e7815c774b9109fdb2a50b27b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.254
+      value: -0.087
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fa03716e7815c774b9109fdb2a50b27b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 12.031
+      value: 12.061
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fa03716e7815c774b9109fdb2a50b27b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -29522,15 +29534,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 561b2ff789b8ec847ae67b0fb0934378, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.449
+      value: 7.211
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 561b2ff789b8ec847ae67b0fb0934378, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.943
+      value: 2.474
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 561b2ff789b8ec847ae67b0fb0934378, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 13.61
+      value: 13.568
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 561b2ff789b8ec847ae67b0fb0934378, type: 3}
       propertyPath: m_LocalRotation.w
@@ -29560,6 +29572,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4120385730159851830, guid: 561b2ff789b8ec847ae67b0fb0934378, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 561b2ff789b8ec847ae67b0fb0934378, type: 3}
       propertyPath: m_Name
       value: Smoke Machine left
@@ -29569,7 +29585,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8934777400606672865, guid: 561b2ff789b8ec847ae67b0fb0934378, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 561b2ff789b8ec847ae67b0fb0934378, type: 3}
       insertIndex: -1
@@ -33022,16 +33039,28 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: fa03716e7815c774b9109fdb2a50b27b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5669
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fa03716e7815c774b9109fdb2a50b27b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5669
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fa03716e7815c774b9109fdb2a50b27b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5669
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fa03716e7815c774b9109fdb2a50b27b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.4679933
+      value: -7.4919
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fa03716e7815c774b9109fdb2a50b27b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.254
+      value: -0.094
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fa03716e7815c774b9109fdb2a50b27b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9.4698515
+      value: 8.787
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fa03716e7815c774b9109fdb2a50b27b, type: 3}
       propertyPath: m_LocalRotation.w
