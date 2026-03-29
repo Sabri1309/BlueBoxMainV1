@@ -2499,7 +2499,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 561b2ff789b8ec847ae67b0fb0934378, type: 3}
       propertyPath: m_Name
-      value: Smoke Machine 01 (1)
+      value: Smoke Machine right
       objectReference: {fileID: 0}
     - target: {fileID: 3725102176391765030, guid: 561b2ff789b8ec847ae67b0fb0934378, type: 3}
       propertyPath: m_Enabled
@@ -10439,8 +10439,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SliderToSmokeAmount
   smokeMachine: {fileID: 1730294873}
-  minLocalX: -0.005956863
-  maxLocalX: 0.00304
+  minLocalX: -0.00529
+  maxLocalX: 0.00313
 --- !u!1 &496965424
 GameObject:
   m_ObjectHideFlags: 0
@@ -20398,6 +20398,38 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1567753617}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1051905718
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1051905719}
+  m_Layer: 0
+  m_Name: RightSliderRail
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1051905719
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051905718}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.24730901, z: -0, w: 0.9689366}
+  m_LocalPosition: {x: 0.00082, y: -0.00238, z: 0.0067}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5569172330189263935}
+  m_Father: {fileID: 1126922665619032174}
+  m_LocalEulerAnglesHint: {x: 0, y: -28.637, z: 0}
 --- !u!1 &1052651118
 GameObject:
   m_ObjectHideFlags: 0
@@ -27430,7 +27462,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fbfb7cd28227fc4f9f97f62281dd55d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SmokeMachineController
-  smokeParticleSystem: {fileID: 436086669}
+  smokeParticleSystem: {fileID: 778247829}
   maxEmissionRate: 100
 --- !u!4 &1730294874 stripped
 Transform:
@@ -29530,7 +29562,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 561b2ff789b8ec847ae67b0fb0934378, type: 3}
       propertyPath: m_Name
-      value: Smoke Machine 01
+      value: Smoke Machine left
       objectReference: {fileID: 0}
     - target: {fileID: 3725102176391765030, guid: 561b2ff789b8ec847ae67b0fb0934378, type: 3}
       propertyPath: m_Enabled
@@ -33859,6 +33891,11 @@ GameObject:
   - component: {fileID: 1532374547695834492}
   - component: {fileID: 8825534444030812170}
   - component: {fileID: 493966420}
+  - component: {fileID: 8825534444030812175}
+  - component: {fileID: 8825534444030812174}
+  - component: {fileID: 8825534444030812173}
+  - component: {fileID: 8825534444030812172}
+  - component: {fileID: 8825534444030812171}
   m_Layer: 0
   m_Name: slider_2
   m_TagString: Untagged
@@ -34234,7 +34271,7 @@ Transform:
   - {fileID: 3296181353383475977}
   - {fileID: 7638912769367192483}
   - {fileID: 25860764}
-  - {fileID: 5569172330189263935}
+  - {fileID: 1051905719}
   m_Father: {fileID: 543450651719792955}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1352865248012474915
@@ -35066,12 +35103,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 585055882676485693}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.24640611, z: -0, w: 0.9691667}
-  m_LocalPosition: {x: -0.0059568626, y: -0.0024554771, z: 0.004634875}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.00529, y: -0.00008, z: 0.00143}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1126922665619032174}
+  m_Father: {fileID: 1051905719}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5830285023437531695
 GameObject:
@@ -36333,6 +36370,150 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8825534444030812171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 585055882676485693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9597e632dfbca247bcf65e49c67078e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Oculus.Interaction::Oculus.Interaction.OneGrabTranslateTransformer
+  _constraints:
+    ConstraintsAreRelative: 1
+    MinX:
+      Constrain: 1
+      Value: 0
+    MaxX:
+      Constrain: 1
+      Value: 0.01
+    MinY:
+      Constrain: 1
+      Value: 0
+    MaxY:
+      Constrain: 1
+      Value: 0
+    MinZ:
+      Constrain: 1
+      Value: 0
+    MaxZ:
+      Constrain: 1
+      Value: 0
+--- !u!114 &8825534444030812172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 585055882676485693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9a7676b01585ce43908639a27765dfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Oculus.Interaction::Oculus.Interaction.HandGrab.HandGrabInteractable
+  _interactorFilters: []
+  _maxInteractors: -1
+  _maxSelectingInteractors: -1
+  _data: {fileID: 0}
+  _pointableElement: {fileID: 8825534444030812173}
+  _rigidbody: {fileID: 8825534444030812174}
+  _physicsGrabbable: {fileID: 0}
+  _resetGrabOnGrabsUpdated: 1
+  _scoringModifier:
+    _positionRotationWeight: 0.8
+  _slippiness: 0
+  _supportedGrabTypes: 3
+  _pinchGrabRules:
+    _thumbRequirement: 1
+    _indexRequirement: 1
+    _middleRequirement: 1
+    _ringRequirement: 0
+    _pinkyRequirement: 0
+    _unselectMode: 0
+  _palmGrabRules:
+    _thumbRequirement: 1
+    _indexRequirement: 2
+    _middleRequirement: 2
+    _ringRequirement: 2
+    _pinkyRequirement: 1
+    _unselectMode: 0
+  _movementProvider: {fileID: 0}
+  _handAligment: 1
+  _handGrabPoses: []
+--- !u!114 &8825534444030812173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 585055882676485693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43f86b14a27b52f4f9298c33015b5c26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Oculus.Interaction::Oculus.Interaction.Grabbable
+  _transferOnSecondSelection: 0
+  _addNewPointsToFront: 0
+  _forwardElement: {fileID: 0}
+  _oneGrabTransformer: {fileID: 8825534444030812171}
+  _twoGrabTransformer: {fileID: 0}
+  _targetTransform: {fileID: 0}
+  _maxGrabPoints: -1
+  _rigidbody: {fileID: 8825534444030812174}
+  _kinematicWhileSelected: 1
+  _throwWhenUnselected: 1
+  _forceKinematicDisabled: 0
+--- !u!54 &8825534444030812174
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 585055882676485693}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 124
+  m_CollisionDetection: 0
+--- !u!65 &8825534444030812175
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 585055882676485693}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0042348406, y: 0.0022237361, z: 0.0019299475}
+  m_Center: {x: 0.000010258189, y: 0.00022235951, z: -0.000349086}
 --- !u!23 &8917680673942308388
 MeshRenderer:
   m_ObjectHideFlags: 0
