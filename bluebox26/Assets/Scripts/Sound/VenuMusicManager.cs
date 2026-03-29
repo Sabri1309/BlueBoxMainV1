@@ -5,6 +5,9 @@ public class VenueMusicManager : MonoBehaviour
     public AudioSource[] audioSources;
     public AudioClip[] tracks;
 
+    [Header("Filters")]
+    public AudioLowPassFilter[] lowPassFilters;
+
     private int currentTrackIndex = 0;
     private bool isPlaying = false;
 
@@ -19,16 +22,27 @@ public class VenueMusicManager : MonoBehaviour
         }
     }
 
-  public void SetVolume(float normalizedValue)
-{
-    float volume = Mathf.Clamp01(normalizedValue);
-
-    foreach (AudioSource source in audioSources)
+    public void SetVolume(float normalizedValue)
     {
-        if (source != null)
-            source.volume = volume;
+        float volume = Mathf.Clamp01(normalizedValue);
+
+        foreach (AudioSource source in audioSources)
+        {
+            if (source != null)
+                source.volume = volume;
+        }
     }
-}
+
+    public void SetTone(float normalizedValue)
+    {
+        float cutoff = Mathf.Lerp(500f, 22000f, Mathf.Clamp01(normalizedValue));
+
+        foreach (AudioLowPassFilter filter in lowPassFilters)
+        {
+            if (filter != null)
+                filter.cutoffFrequency = cutoff;
+        }
+    }
 
     public void TogglePlayPause()
     {
