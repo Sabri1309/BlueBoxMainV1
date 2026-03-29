@@ -19,16 +19,16 @@ public class VenueMusicManager : MonoBehaviour
         }
     }
 
-    public void SetVolume(float normalizedValue)
-    {
-        float volume = Mathf.Clamp01(normalizedValue);
+  public void SetVolume(float normalizedValue)
+{
+    float volume = Mathf.Clamp01(normalizedValue);
 
-        foreach (AudioSource source in audioSources)
-        {
-            if (source == null) continue;
+    foreach (AudioSource source in audioSources)
+    {
+        if (source != null)
             source.volume = volume;
-        }
     }
+}
 
     public void TogglePlayPause()
     {

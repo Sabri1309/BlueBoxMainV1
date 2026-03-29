@@ -2680,8 +2680,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 5
-  MaxDistance: 30
+  MinDistance: 10
+  MaxDistance: 25
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -11203,6 +11203,144 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1122966012}
   m_Mesh: {fileID: -629719859055844128, guid: af8e06d6969adbe4f9562fccfb64ec54, type: 3}
+--- !u!1 &1130848440 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -2636818737478726468, guid: 8176b613ad345a743b290492694b47e9, type: 3}
+  m_PrefabInstance: {fileID: 1980440272}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1130848444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130848440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 124f4583f657475469a45ab6fca8f921, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Oculus.Interaction::Oculus.Interaction.OneGrabRotateTransformer
+  _pivotTransform: {fileID: 0}
+  _rotationAxis: 1
+  _constraints:
+    MinAngle:
+      Constrain: 0
+      Value: 0
+    MaxAngle:
+      Constrain: 0
+      Value: 0
+--- !u!114 &1130848445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130848440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9a7676b01585ce43908639a27765dfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Oculus.Interaction::Oculus.Interaction.HandGrab.HandGrabInteractable
+  _interactorFilters: []
+  _maxInteractors: -1
+  _maxSelectingInteractors: -1
+  _data: {fileID: 0}
+  _pointableElement: {fileID: 1130848446}
+  _rigidbody: {fileID: 1130848447}
+  _physicsGrabbable: {fileID: 0}
+  _resetGrabOnGrabsUpdated: 1
+  _scoringModifier:
+    _positionRotationWeight: 0.8
+  _slippiness: 0
+  _supportedGrabTypes: 3
+  _pinchGrabRules:
+    _thumbRequirement: 1
+    _indexRequirement: 1
+    _middleRequirement: 1
+    _ringRequirement: 0
+    _pinkyRequirement: 0
+    _unselectMode: 0
+  _palmGrabRules:
+    _thumbRequirement: 1
+    _indexRequirement: 2
+    _middleRequirement: 2
+    _ringRequirement: 2
+    _pinkyRequirement: 1
+    _unselectMode: 0
+  _movementProvider: {fileID: 0}
+  _handAligment: 1
+  _handGrabPoses: []
+--- !u!114 &1130848446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130848440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43f86b14a27b52f4f9298c33015b5c26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Oculus.Interaction::Oculus.Interaction.Grabbable
+  _transferOnSecondSelection: 0
+  _addNewPointsToFront: 0
+  _forwardElement: {fileID: 0}
+  _oneGrabTransformer: {fileID: 0}
+  _twoGrabTransformer: {fileID: 0}
+  _targetTransform: {fileID: 0}
+  _maxGrabPoints: -1
+  _rigidbody: {fileID: 1130848447}
+  _kinematicWhileSelected: 1
+  _throwWhenUnselected: 1
+  _forceKinematicDisabled: 0
+--- !u!54 &1130848447
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130848440}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &1130848448
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130848440}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0057983072, y: 0.0057999995, z: 0.0048}
+  m_Center: {x: 0.000000029802322, y: 0.000000059604645, z: 0}
 --- !u!1 &1132184814
 GameObject:
   m_ObjectHideFlags: 0
@@ -17961,8 +18099,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 5
-  MaxDistance: 30
+  MinDistance: 10
+  MaxDistance: 25
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -18512,8 +18650,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 5
-  MaxDistance: 30
+  MinDistance: 10
+  MaxDistance: 25
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -19860,6 +19998,91 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1565430944}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1949446607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1980440275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43f86b14a27b52f4f9298c33015b5c26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Oculus.Interaction::Oculus.Interaction.Grabbable
+  _transferOnSecondSelection: 0
+  _addNewPointsToFront: 0
+  _forwardElement: {fileID: 0}
+  _oneGrabTransformer: {fileID: 1949446609}
+  _twoGrabTransformer: {fileID: 0}
+  _targetTransform: {fileID: 0}
+  _maxGrabPoints: -1
+  _rigidbody: {fileID: 1980440279}
+  _kinematicWhileSelected: 1
+  _throwWhenUnselected: 1
+  _forceKinematicDisabled: 0
+--- !u!114 &1949446608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1980440275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9a7676b01585ce43908639a27765dfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Oculus.Interaction::Oculus.Interaction.HandGrab.HandGrabInteractable
+  _interactorFilters: []
+  _maxInteractors: -1
+  _maxSelectingInteractors: -1
+  _data: {fileID: 0}
+  _pointableElement: {fileID: 1949446607}
+  _rigidbody: {fileID: 1980440279}
+  _physicsGrabbable: {fileID: 0}
+  _resetGrabOnGrabsUpdated: 1
+  _scoringModifier:
+    _positionRotationWeight: 0.8
+  _slippiness: 0
+  _supportedGrabTypes: 3
+  _pinchGrabRules:
+    _thumbRequirement: 1
+    _indexRequirement: 1
+    _middleRequirement: 1
+    _ringRequirement: 0
+    _pinkyRequirement: 0
+    _unselectMode: 0
+  _palmGrabRules:
+    _thumbRequirement: 1
+    _indexRequirement: 2
+    _middleRequirement: 2
+    _ringRequirement: 2
+    _pinkyRequirement: 1
+    _unselectMode: 0
+  _movementProvider: {fileID: 0}
+  _handAligment: 1
+  _handGrabPoses: []
+--- !u!114 &1949446609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1980440275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 124f4583f657475469a45ab6fca8f921, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Oculus.Interaction::Oculus.Interaction.OneGrabRotateTransformer
+  _pivotTransform: {fileID: 0}
+  _rotationAxis: 2
+  _constraints:
+    MinAngle:
+      Constrain: 1
+      Value: -135
+    MaxAngle:
+      Constrain: 1
+      Value: 135
 --- !u!1 &1952780010
 GameObject:
   m_ObjectHideFlags: 0
@@ -20327,9 +20550,39 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 228869368842278292, guid: 8176b613ad345a743b290492694b47e9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2060102529}
+    - targetCorrespondingSourceObject: {fileID: -2636818737478726468, guid: 8176b613ad345a743b290492694b47e9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1130848448}
+    - targetCorrespondingSourceObject: {fileID: -2636818737478726468, guid: 8176b613ad345a743b290492694b47e9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1130848447}
+    - targetCorrespondingSourceObject: {fileID: -2636818737478726468, guid: 8176b613ad345a743b290492694b47e9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1130848446}
+    - targetCorrespondingSourceObject: {fileID: -2636818737478726468, guid: 8176b613ad345a743b290492694b47e9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1130848445}
+    - targetCorrespondingSourceObject: {fileID: -2636818737478726468, guid: 8176b613ad345a743b290492694b47e9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1130848444}
     - targetCorrespondingSourceObject: {fileID: -6541689440997761253, guid: 8176b613ad345a743b290492694b47e9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 774219678}
+    - targetCorrespondingSourceObject: {fileID: -6541689440997761253, guid: 8176b613ad345a743b290492694b47e9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1949446609}
+    - targetCorrespondingSourceObject: {fileID: -6541689440997761253, guid: 8176b613ad345a743b290492694b47e9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1949446608}
+    - targetCorrespondingSourceObject: {fileID: -6541689440997761253, guid: 8176b613ad345a743b290492694b47e9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1949446607}
+    - targetCorrespondingSourceObject: {fileID: -6541689440997761253, guid: 8176b613ad345a743b290492694b47e9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1980440280}
+    - targetCorrespondingSourceObject: {fileID: -6541689440997761253, guid: 8176b613ad345a743b290492694b47e9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1980440279}
     - targetCorrespondingSourceObject: {fileID: -4628255599806040935, guid: 8176b613ad345a743b290492694b47e9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1887180084}
@@ -20443,6 +20696,54 @@ MonoBehaviour:
   _whenSelectingInteractorViewRemoved:
     m_PersistentCalls:
       m_Calls: []
+--- !u!54 &1980440279
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1980440275}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &1980440280
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1980440275}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0057983072, y: 0.0057999995, z: 0.0048}
+  m_Center: {x: 0, y: 0.000000059604645, z: 0}
 --- !u!65 &1980440281
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21948,8 +22249,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 5
-  MaxDistance: 30
+  MinDistance: 10
+  MaxDistance: 25
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
