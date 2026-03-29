@@ -2,78 +2,99 @@ using UnityEngine;
 
 public class VenueMusicManager : MonoBehaviour
 {
-    public AudioSource audioSource;
+    public AudioSource[] audioSources;
     public AudioClip[] tracks;
 
     private int currentTrackIndex = 0;
+    private bool isPlaying = false;
 
     void Start()
     {
-        if (audioSource == null)
-            audioSource = GetComponent<AudioSource>();
+        if (tracks == null || tracks.Length == 0) return;
 
-        if (tracks != null && tracks.Length > 0)
-            audioSource.clip = tracks[currentTrackIndex];
+        foreach (AudioSource source in audioSources)
+        {
+            if (source == null) continue;
+            source.clip = tracks[currentTrackIndex];
+        }
     }
 
     public void SetVolume(float normalizedValue)
     {
-        if (audioSource == null) return;
-        audioSource.volume = Mathf.Clamp01(normalizedValue);
+        float volume = Mathf.Clamp01(normalizedValue);
+
+        foreach (AudioSource source in audioSources)
+        {
+            if (source == null) continue;
+            source.volume = volume;
+        }
     }
 
     public void TogglePlayPause()
     {
-        if (audioSource == null || tracks == null || tracks.Length == 0) return;
+        if (tracks == null || tracks.Length == 0) return;
 
-        if (audioSource.isPlaying)
+        if (isPlaying)
         {
-            audioSource.Pause();
+            foreach (AudioSource source in audioSources)
+            {
+                if (source == null) continue;
+                source.Pause();
+            }
+
+            isPlaying = false;
         }
         else
         {
-            if (audioSource.clip == null)
-                audioSource.clip = tracks[currentTrackIndex];
+            foreach (AudioSource source in audioSources)
+            {
+                if (source == null) continue;
 
-            if (audioSource.time > 0f)
-                audioSource.UnPause();
-            else
-                audioSource.Play();
+                if (source.clip == null)
+                    source.clip = tracks[currentTrackIndex];
+
+                source.Play();
+            }
+
+            isPlaying = true;
         }
     }
 
     public void NextTrack()
     {
-        if (audioSource == null || tracks == null || tracks.Length == 0) return;
-
-        bool wasPlaying = audioSource.isPlaying;
+        if (tracks == null || tracks.Length == 0) return;
 
         currentTrackIndex = (currentTrackIndex + 1) % tracks.Length;
-        audioSource.clip = tracks[currentTrackIndex];
 
-        if (wasPlaying)
-            audioSource.Play();
+        foreach (AudioSource source in audioSources)
+        {
+            if (source == null) continue;
+
+            source.Stop();
+            source.clip = tracks[currentTrackIndex];
+
+            if (isPlaying)
+                source.Play();
+        }
     }
 
     public void PreviousTrack()
     {
-        if (audioSource == null || tracks == null || tracks.Length == 0) return;
-
-        bool wasPlaying = audioSource.isPlaying;
+        if (tracks == null || tracks.Length == 0) return;
 
         currentTrackIndex--;
         if (currentTrackIndex < 0)
             currentTrackIndex = tracks.Length - 1;
 
-        audioSource.clip = tracks[currentTrackIndex];
+        foreach (AudioSource source in audioSources)
+        {
+            if (source == null) continue;
 
-        if (wasPlaying)
-            audioSource.Play();
-    }
+            source.Stop();
+            source.clip = tracks[currentTrackIndex];
 
-    public void StopMusic()
-    {
-        if (audioSource == null) return;
-        audioSource.Stop();
+            if (isPlaying)
+                source.Play();
+        }
     }
 }
