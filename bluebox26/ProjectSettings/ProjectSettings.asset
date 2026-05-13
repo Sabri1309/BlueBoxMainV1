@@ -147,8 +147,9 @@ PlayerSettings:
   preloadedAssets:
   - {fileID: 11400000, guid: 311081876d776114bbecb4f89ea906e6, type: 2}
   - {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-  - {fileID: 4089203484910784817, guid: 94fa55d5675374e46bcdd89c3fc6229b, type: 2}
-  - {fileID: -2868360139764997674, guid: 20e6b9d47cd96de4c973f903a6a96ae9, type: 2}
+  - {fileID: 11400000, guid: d31d177b687705d46a3b4101d35126d7, type: 2}
+  - {fileID: 8610659097400277571, guid: 94fa55d5675374e46bcdd89c3fc6229b, type: 2}
+  - {fileID: 2909882547472521443, guid: 20e6b9d47cd96de4c973f903a6a96ae9, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -532,9 +533,16 @@ PlayerSettings:
   - m_BuildTarget: Standalone
     m_StaticBatching: 1
     m_DynamicBatching: 0
+  - m_BuildTarget: Android
+    m_StaticBatching: 1
+    m_DynamicBatching: 0
   m_BuildTargetShaderSettings: []
-  m_BuildTargetGraphicsJobs: []
-  m_BuildTargetGraphicsJobMode: []
+  m_BuildTargetGraphicsJobs:
+  - m_BuildTarget: AndroidPlayer
+    m_GraphicsJobs: 1
+  m_BuildTargetGraphicsJobMode:
+  - m_BuildTarget: AndroidPlayer
+    m_GraphicsJobMode: 1
   m_BuildTargetGraphicsAPIs:
   - m_BuildTarget: iOSSupport
     m_APIs: 10000000
