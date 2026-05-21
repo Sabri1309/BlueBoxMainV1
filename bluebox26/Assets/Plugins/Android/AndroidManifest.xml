@@ -13,7 +13,7 @@
     <meta-data android:name="com.oculus.handtracking.frequency" android:value="LOW" />
     <meta-data android:name="com.oculus.ossplash.background" android:value="black" />
     <meta-data android:name="com.oculus.telemetry.project_guid" android:value="1dc810a5-96e0-49ee-a74c-ba608485b515" />
-    <meta-data android:name="com.oculus.supportedDevices" android:value="quest|quest3" tools:replace="android:value" />
+    <meta-data android:name="com.oculus.supportedDevices" android:value="quest3" tools:replace="android:value" />
   </application>
   <uses-feature android:name="android.hardware.vr.headtracking" android:version="1" android:required="true" />
   <uses-feature android:name="oculus.software.handtracking" android:required="false" />
